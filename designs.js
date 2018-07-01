@@ -8,7 +8,7 @@ let color = document.getElementById("colorPicker");
 // adding eventlistener to the color when clicked
 color.addEventListener("click", function(){});
 
-// action on the submit button when clicked
+// this clears the previous grid(if any) and makes a new grid.
 sizePicker.onsubmit = function(event){
     event.preventDefault();
     clearGrid();
@@ -30,10 +30,6 @@ function clearGrid(){
          canvas.removeChild(canvas.firstChild);
     }
 }
-// alternative code:
-// while (table.rows.length > 0) {
-//  table.deleteRow(0);
-// }
 
 function fillSquare () {
     this.setAttribute("style", `background-color: ${color.value}`);
